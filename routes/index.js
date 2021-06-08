@@ -25,7 +25,7 @@ router.get('/:id', async (req, res, next) => {
       visits: visitCount(id),
       ...result
     };
-    res.render('home', data);
+    res.render('comic', data);
   } catch (e) {
     next();
   }
