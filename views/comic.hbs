@@ -9,6 +9,7 @@
 
         </div>
         <div class="comic-views">
+            <div class="btn btn-light" style="float: left;"><a href="/random">Random?</a></div>
             <span class="views">{{day}}/{{month}}/{{year}}</span>
         </div>
         <div class="my-4 comic-image">
@@ -16,12 +17,17 @@
             <a href="/{{left}}"><i class="fa fa-chevron-left"></i></a>
             {{/if}}
             <img src="{{img}}" alt="{{alt}}">
+            {{#if right}}
             <a href="/{{right}}"><i class="fa fa-chevron-right"></i></a>
+            {{/if}}
         </div>
+        {{#if transcript}}
         <pre>
             <h6>Transcript:</h6>
             {{transcript}}
         </pre>
+        {{/if}}
+
     </div>
 
 </section>
