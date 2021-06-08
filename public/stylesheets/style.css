@@ -1,0 +1,61 @@
+body {
+  padding: 4rem;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-image: url('../images/background.jpg');
+  height: 100%; 
+  background-position: center;
+  background-repeat: no-repeat;
+  -webkit-background-size: fill;
+  -moz-background-size: fill;
+  -o-background-size: fill;
+  background-size: fill;
+}
+
+section {
+  border: .5px solid black;
+  border-radius: 4px;
+  text-align: center;
+  padding: 3rem;
+  background-color: white;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  color: black;
+}
+
+pre {
+  text-align: start;
+  color: #666;
+  white-space: pre-wrap;
+  white-space: -moz-pre-wrap;
+  white-space: -pre-wrap;
+  white-space: -o-pre-wrap;
+  word-wrap: break-word;
+}
+
+span.views {
+  color: #aaa;
+}
+
+.comic-strip {
+  margin: 2rem 0;
+}
+
+.comic-title {
+  padding-bottom: 4px;
+  border-bottom: 0.5px solid #aaa;
+}
+
+.comic-views {
+  text-align: end;
+  padding-top: 4px;
+}
+
+.fa-chevron-left, .fa-chevron-right {
+  font-size: x-large;
+  margin: 0 1rem;
+}

@@ -1,0 +1,27 @@
+<section>
+    <div class="container comic-strip">
+        <div class="align-items-end d-flex justify-content-between comic-title">
+
+            <h3 class="mb-0">
+                {{title}}
+            </h3>
+            <span><i class="fa fa-eye"></i> {{visits}}</span>
+
+        </div>
+        <div class="comic-views">
+            <span class="views">{{day}}/{{month}}/{{year}}</span>
+        </div>
+        <div class="my-4 comic-image">
+            {{#if left}}
+            <a href="/{{left}}"><i class="fa fa-chevron-left"></i></a>
+            {{/if}}
+            <img src="{{img}}" alt="{{alt}}">
+            <a href="/{{right}}"><i class="fa fa-chevron-right"></i></a>
+        </div>
+        <pre>
+            <h6>Transcript:</h6>
+            {{transcript}}
+        </pre>
+    </div>
+
+</section>
