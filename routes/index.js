@@ -1,14 +1,7 @@
 const express = require('express');
-const axios = require('axios');
 const router = express.Router();
 const visitCount = require('../utils/visitCount');
 const random = require('../utils/random');
-
-const BASE_URL = 'https://xkcd.com';
-
-const api = axios.create({
-  baseURL: BASE_URL
-});
 
 const MAX_COMICS = 2473;
 
@@ -23,16 +16,19 @@ function parseComic(data) {
   };
 }
 
+// Retrieve the default comic.
 router.get('/', async (req, res) => {
   const result = (await api.get(`/info.0.json`)).data;
   res.render('comic', parseComic(result));
 });
 
 router.get('/random', (req, res) => {
+  // Get a random number between 1...MAX_COMICS and redirect to GET /:id route
   res.redirect(`/${random(MAX_COMICS)}`);
 });
 
 router.get('/:id', async (req, res, next) => {
+  // Receive the id from url as path parameter.
   let { id } = req.params;
   try {
     id = parseInt(id);
