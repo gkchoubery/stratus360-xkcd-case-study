@@ -1,5 +1,6 @@
 const express = require('express');
 const router = express.Router();
+const api = require('../utils/rest-client');
 const visitCount = require('../utils/visitCount');
 const random = require('../utils/random');
 
